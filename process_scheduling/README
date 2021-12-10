@@ -1,0 +1,32 @@
+Project 4
+Process Scheduler
+CS 4760
+Liora Wachsstock
+
+Compilation and running the program:
+make
+./oss [-t sec] [-h] [-l filename]
+
+-t with argument allows the user to set the time for how long the program will run for
+-h prints a help message and terminates
+-l with argument allows user to set the name of the logfile
+**************************************************************************************
+Files:
+messenger.c, messenger.h: holds functions for passing messenges back and forth between oss and userproceses
+
+pcb_table.c, pcb_table.h: holds functions for CRUD operations for pcb table.
+
+queue.c, queue.h: holds funcitons for CRUD operations for process scheduling queues
+
+clock.c, clock.h: holds functions for CRUD operations (including shared memory and semaphore initializations) for clock functionality
+
+userprocess.c: userprocess binary
+
+oss.c, oss.h: main process scheduling simulator code
+
+****************************************************************************
+Outstanding Problems: 
+When the program terminates, the child processes are still trying to send their messages but they don't get sent when the program terminates. 
+
+Git Log: 
+See File "Version"

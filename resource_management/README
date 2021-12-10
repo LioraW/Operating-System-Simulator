@@ -1,0 +1,35 @@
+Project 5
+Deadlock
+CS 4760
+Liora Wachsstock
+
+Compilation and running the program:
+make
+./oss [-t sec] [-h] [-l filename]
+
+-t with argument allows the user to set the time for how long the program will run for
+-h prints a help message and terminates
+-l with argument allows user to set the name of the logfile
+**************************************************************************************
+Files:
+messenger.c, messenger.h: holds functions for passing messenges back and forth between oss and userproceses
+
+rd_table.c, rd_table.h: holds functions for CRUD operations for resource descriptor table, as well as **deadlock avoidance and safety algorithm **
+
+queue.c, queue.h: holds funcitons for CRUD operations for process scheduling queues
+
+clock.c, clock.h: holds functions for CRUD operations (including shared memory and semaphore initializations) for clock functionality
+
+userprocess.c: userprocess binary
+
+oss.c, oss.h: main process scheduling simulator code
+
+****************************************************************************
+Communication to OSS is handled through message queues.
+Deadlock resolving: terminate all process that have that requested resource except for the one that requested it
+
+Outstanding Problems:
+- sometimes the program gets stuck waiting for a message, but hitting ctrl-c works fine and deletes all shared memory and semaphores
+
+Git Log: 
+See File "Version"

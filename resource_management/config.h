@@ -1,0 +1,4 @@
+#define MAX_TIME 5
+#define NUM_PROCESSES 18
+#define MAX_PROCESSES 40
+#define NUM_RESOURCES 20
